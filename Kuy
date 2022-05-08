@@ -4,9 +4,12 @@ repeat wait()
         if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
             if game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible == true then
                 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
-                    IKAI = true
+                    wait(2)
+                    v.Function()
+                    wait(2)
+                    v.Function()
                 end
             end
         end
     end)
-until IKAI == true
+until game.Players.localPlayer.Neutral == false
